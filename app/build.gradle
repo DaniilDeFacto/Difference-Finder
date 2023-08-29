@@ -16,9 +16,9 @@ repositories {
 
 dependencies {
     implementation 'info.picocli:picocli:4.7.4'
-    annotationProcessor 'info.picocli:picocli-codegen:4.7.4'
     testImplementation platform('org.junit:junit-bom:5.9.2')
     testImplementation 'org.junit.jupiter:junit-jupiter:5.9.2'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
 }
 
 test {
@@ -27,5 +27,4 @@ test {
 
 compileJava {
     options.release = 20
-    options.compilerArgs += ["-Aproject=${project.group}/${project.name}"]
 }

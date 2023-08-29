@@ -5,7 +5,6 @@ import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 import picocli.CommandLine.Parameters;
 
-import java.io.File;
 import java.util.concurrent.Callable;
 
 @Command(name = "gendiff", mixinStandardHelpOptions = true,
@@ -13,10 +12,10 @@ import java.util.concurrent.Callable;
 public class App implements Callable<Integer> {
 
     @Parameters(index = "0", paramLabel = "filepath1", description = "path to first file")
-    private File filepath1;
+    private String filePath1;
 
     @Parameters(index = "1", paramLabel = "filepath2", description = "path to second file")
-    private File filepath2;
+    private String filePath2;
 
     @Option(names = {"-h", "--help"}, usageHelp = true, description = "Show this help message and exit.")
     boolean usageHelpRequested;
@@ -29,6 +28,8 @@ public class App implements Callable<Integer> {
 
     @Override
     public Integer call() throws Exception {
+        var diff = Differ.generate(filePath1, filePath2);
+        System.out.println(diff);
         return 0;
     }
 
@@ -36,5 +37,4 @@ public class App implements Callable<Integer> {
         int exitCode = new CommandLine(new App()).execute(args);
         System.exit(exitCode);
     }
-
 }
