@@ -25,7 +25,7 @@ public class Differ {
         Map<String, Object> map1 = objectMapper.readValue(json1, new TypeReference<>(){});
         Map<String, Object> map2 = objectMapper.readValue(json2, new TypeReference<>(){});
         List<Map<String, Object>> diffMap = createDiffMap(map1,map2);
-        return "\n{\n" + translateToString(diffMap) + "}";
+        return translateToString(diffMap);
     }
 
     public static List<Map<String, Object>> createDiffMap(Map<String, Object> map1, Map<String, Object> map2) {
@@ -59,6 +59,6 @@ public class Differ {
                         + "  + " + element.get("FIELD") + ": " + element.get("NEW_VALUE") + "\n";
             }
         }
-        return result;
+        return "{\n" + result + "}";
     }
 }
