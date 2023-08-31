@@ -52,14 +52,19 @@ public class Differ {
     }
 
     public static String translateToString(List<Map<String, Object>> diffMap) {
-        String result = "";
+        StringBuilder result = new StringBuilder();
         for (var element : diffMap) {
             switch (element.get("STATUS").toString()) {
-                case "REMOVED" -> result += ("  - " + element.get("FIELD") + ": " + element.get("OLD_VALUE") + "\n");
-                case "ADDED" -> result += "  + " + element.get("FIELD") + ": " + element.get("NEW_VALUE") + "\n";
-                case "SAME" -> result += "    " + element.get("FIELD") + ": " + element.get("OLD_VALUE") + "\n";
-                default -> result += "  - " + element.get("FIELD") + ": " + element.get("OLD_VALUE") + "\n"
-                        + "  + " + element.get("FIELD") + ": " + element.get("NEW_VALUE") + "\n";
+                case "REMOVED" -> result.append("  - ").append(element.get("FIELD"))
+                        .append(": ").append(element.get("OLD_VALUE")).append("\n");
+                case "ADDED" -> result.append("  + ").append(element.get("FIELD"))
+                        .append(": ").append(element.get("NEW_VALUE")).append("\n");
+                case "SAME" -> result.append("    ").append(element.get("FIELD"))
+                        .append(": ").append(element.get("OLD_VALUE")).append("\n");
+                default -> result.append("  - ").append(element.get("FIELD"))
+                        .append(": ").append(element.get("OLD_VALUE")).append("\n")
+                        .append("  + ").append(element.get("FIELD"))
+                        .append(": ").append(element.get("NEW_VALUE")).append("\n");
             }
         }
         return "{\n" + result + "}";
