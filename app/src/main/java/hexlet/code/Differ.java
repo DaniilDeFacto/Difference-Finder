@@ -6,7 +6,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Map;
+import java.util.List;
+import java.util.TreeSet;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -22,9 +25,9 @@ public class Differ {
         String json1 = Files.readString(path1);
         String json2 = Files.readString(path2);
         ObjectMapper objectMapper = new ObjectMapper();
-        Map<String, Object> map1 = objectMapper.readValue(json1, new TypeReference<>(){});
-        Map<String, Object> map2 = objectMapper.readValue(json2, new TypeReference<>(){});
-        List<Map<String, Object>> diffMap = createDiffMap(map1,map2);
+        Map<String, Object> map1 = objectMapper.readValue(json1, new TypeReference<>() { });
+        Map<String, Object> map2 = objectMapper.readValue(json2, new TypeReference<>() { });
+        List<Map<String, Object>> diffMap = createDiffMap(map1, map2);
         return translateToString(diffMap);
     }
 
@@ -41,7 +44,7 @@ public class Differ {
             } else if (map1.containsKey(key) && map2.containsKey(key) && map1.get(key).equals(map2.get(key))) {
                 diffMap.add(Map.of("FIELD", key, "STATUS", "SAME", "OLD_VALUE", map1.get(key)));
             } else {
-                diffMap.add(Map.of("FIELD", key, "STATUS", "UPDATED","OLD_VALUE", map1.get(key),
+                diffMap.add(Map.of("FIELD", key, "STATUS", "UPDATED", "OLD_VALUE", map1.get(key),
                         "NEW_VALUE", map2.get(key)));
             }
         }
@@ -52,7 +55,7 @@ public class Differ {
         String result = "";
         for (var element : diffMap) {
             switch (element.get("STATUS").toString()) {
-                case "REMOVED" -> result += "  - " + element.get("FIELD") + ": " + element.get("OLD_VALUE") + "\n";
+                case "REMOVED" -> result += ("  - " + element.get("FIELD") + ": " + element.get("OLD_VALUE") + "\n");
                 case "ADDED" -> result += "  + " + element.get("FIELD") + ": " + element.get("NEW_VALUE") + "\n";
                 case "SAME" -> result += "    " + element.get("FIELD") + ": " + element.get("OLD_VALUE") + "\n";
                 default -> result += "  - " + element.get("FIELD") + ": " + element.get("OLD_VALUE") + "\n"

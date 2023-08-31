@@ -3,8 +3,6 @@ build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
-filepath1.json
-filepath2.json
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
