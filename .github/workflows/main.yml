@@ -18,4 +18,4 @@ jobs:
         with:
           gradle-version: 8.3
       - name: build
-        uses: make build
+        run: make build
