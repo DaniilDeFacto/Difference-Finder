@@ -27,10 +27,6 @@ test {
     useJUnitPlatform()
 }
 
-tasks.named('test', Test) {
-    useJUnitPlatform()
-}
-
 compileJava {
     options.release = 20
 }

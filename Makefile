@@ -1,7 +1,7 @@
 run-dist:
-	./build/install/app/bin/app
+	make -C app run-dist
 
 build:
-	./gradlew clean build
+	make -C app build
 
 .PHONY: build
