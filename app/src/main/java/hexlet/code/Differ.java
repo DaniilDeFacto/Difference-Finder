@@ -1,32 +1,16 @@
 package hexlet.code;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.ObjectMapper;
-
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Map;
 import java.util.List;
+import java.util.Map;
 import java.util.TreeSet;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Differ {
     public static String generate(String filePath1, String filePath2) throws Exception {
-        Path path1 = Paths.get(filePath1).toAbsolutePath().normalize();
-        Path path2 = Paths.get(filePath2).toAbsolutePath().normalize();
-        if (!Files.exists(path1)) {
-            throw new Exception("File '" + path1 + "' does not exist");
-        } else if (!Files.exists(path2)) {
-            throw new Exception("File '" + path2 + "' does not exist");
-        }
-        String json1 = Files.readString(path1);
-        String json2 = Files.readString(path2);
-        ObjectMapper objectMapper = new ObjectMapper();
-        Map<String, Object> map1 = objectMapper.readValue(json1, new TypeReference<>() { });
-        Map<String, Object> map2 = objectMapper.readValue(json2, new TypeReference<>() { });
+        Map<String, Object> map1 = Parser.parse(filePath1);
+        Map<String, Object> map2 = Parser.parse(filePath2);
         List<Map<String, Object>> diffMap = createDiffMap(map1, map2);
         return translateToString(diffMap);
     }
