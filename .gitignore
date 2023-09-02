@@ -3,6 +3,10 @@ build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
+app/File1.json
+app/File2.json
+app/File1.yml
+app/File2.yml
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
