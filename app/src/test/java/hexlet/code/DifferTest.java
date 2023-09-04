@@ -11,13 +11,13 @@ import java.util.Objects;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class DifferTest {
-    ClassLoader classLoader = getClass().getClassLoader();
-    String expectedStylish;
-    String expectedPlain;
-    String expectedJson;
+    private final ClassLoader classLoader = getClass().getClassLoader();
+    private String expectedStylish;
+    private String expectedPlain;
+    private String expectedJson;
 
     @BeforeEach
-    public void beforeEach() throws Exception {
+    final void beforeEach() throws Exception {
         String expectedStylishFile = Objects.requireNonNull(classLoader
                 .getResource("expectedStylishFile.txt"))
                 .getFile();

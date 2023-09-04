@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="239ef5ae-e7fe-4ab8-a48d-c3854eda6535" name="Changes" comment="Add Json.java">
+    <list default="true" id="239ef5ae-e7fe-4ab8-a48d-c3854eda6535" name="Changes" comment="Fix Differ.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/hexlet/code/Differ.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hexlet/code/Differ.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/hexlet/code/DifferTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/hexlet/code/DifferTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -339,7 +339,15 @@
       <option name="project" value="LOCAL" />
       <updated>1693850371886</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Fix Differ.java">
+      <option name="closed" value="true" />
+      <created>1693851206411</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1693851206411</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -368,7 +376,8 @@
     <MESSAGE value="Add Formatter.java" />
     <MESSAGE value="Add Plain.java and Stylish.java" />
     <MESSAGE value="Add Json.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Json.java" />
+    <MESSAGE value="Fix Differ.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix Differ.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
