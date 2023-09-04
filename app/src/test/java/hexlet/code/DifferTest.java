@@ -29,7 +29,7 @@ public class DifferTest {
         Path pathExpectedPlainFile = Paths.get(expectedPlainFile).toAbsolutePath().normalize();
         expectedPlain = Files.readString(pathExpectedPlainFile);
         String expectedJsonFile = Objects.requireNonNull(classLoader
-                        .getResource("expectedJsonFile.txt"))
+                .getResource("expectedJsonFile.txt"))
                 .getFile();
         Path pathExpectedJsonFile = Paths.get(expectedJsonFile).toAbsolutePath().normalize();
         expectedJson = Files.readString(pathExpectedJsonFile);

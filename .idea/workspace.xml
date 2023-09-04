@@ -360,7 +360,23 @@
       <option name="project" value="LOCAL" />
       <updated>1693853915335</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Fix App.java">
+      <option name="closed" value="true" />
+      <created>1693854316297</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1693854316297</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Fix App.java">
+      <option name="closed" value="true" />
+      <created>1693854893909</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1693854893909</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
