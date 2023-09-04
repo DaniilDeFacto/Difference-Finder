@@ -1,5 +1,6 @@
 package hexlet.code;
 
+import hexlet.code.formatters.Json;
 import hexlet.code.formatters.Plain;
 import hexlet.code.formatters.Stylish;
 
@@ -11,6 +12,7 @@ public class Formatter {
         return switch (format) {
             case "stylish" -> Stylish.diffToStylish(diffMap);
             case "plain" -> Plain.diffToPlain(diffMap);
+            case "json" -> Json.diffToJson(diffMap);
             default -> throw new Exception("Unexpected format: " + format);
         };
     }

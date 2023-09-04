@@ -11,3 +11,7 @@
 [![asciicast](https://asciinema.org/a/606223.svg)](https://asciinema.org/a/606223)
 ### Yaml format files diff generation into plain format:
 [![asciicast](https://asciinema.org/a/606224.svg)](https://asciinema.org/a/606224)
+### Json format files diff generation into json format:
+[![asciicast](https://asciinema.org/a/606235.svg)](https://asciinema.org/a/606235)
+### Yaml format files diff generation into json format:
+[![asciicast](https://asciinema.org/a/606236.svg)](https://asciinema.org/a/606236)

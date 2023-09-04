@@ -14,6 +14,7 @@ public class DifferTest {
     ClassLoader classLoader = getClass().getClassLoader();
     String expectedStylish;
     String expectedPlain;
+    String expectedJson;
 
     @BeforeEach
     public void beforeEach() throws Exception {
@@ -27,6 +28,11 @@ public class DifferTest {
                 .getFile();
         Path pathExpectedPlainFile = Paths.get(expectedPlainFile).toAbsolutePath().normalize();
         expectedPlain = Files.readString(pathExpectedPlainFile);
+        String expectedJsonFile = Objects.requireNonNull(classLoader
+                        .getResource("expectedJsonFile.txt"))
+                .getFile();
+        Path pathExpectedJsonFile = Paths.get(expectedJsonFile).toAbsolutePath().normalize();
+        expectedJson = Files.readString(pathExpectedJsonFile);
     }
 
     @Test
@@ -59,5 +65,21 @@ public class DifferTest {
         String filepath2 = Objects.requireNonNull(classLoader.getResource("testFile2.yml")).getFile();
         String actual = Differ.generate(filepath1, filepath2, "plain");
         assertEquals(expectedPlain, actual);
+    }
+
+    @Test
+    public void jsonToJsonDifferTest() throws Exception {
+        String filepath1 = Objects.requireNonNull(classLoader.getResource("testFile1.json")).getFile();
+        String filepath2 = Objects.requireNonNull(classLoader.getResource("testFile2.json")).getFile();
+        String actual = Differ.generate(filepath1, filepath2, "json");
+        assertEquals(expectedJson, actual);
+    }
+
+    @Test
+    public void yamlToJsonDifferTest() throws Exception {
+        String filepath1 = Objects.requireNonNull(classLoader.getResource("testFile1.yml")).getFile();
+        String filepath2 = Objects.requireNonNull(classLoader.getResource("testFile2.yml")).getFile();
+        String actual = Differ.generate(filepath1, filepath2, "json");
+        assertEquals(expectedJson, actual);
     }
 }
