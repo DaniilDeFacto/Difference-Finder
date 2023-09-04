@@ -25,7 +25,7 @@ public class DifferTest {
     public void jsonDifferTest() throws Exception {
         String filepath1 = Objects.requireNonNull(classLoader.getResource("testFile1.json")).getFile();
         String filepath2 = Objects.requireNonNull(classLoader.getResource("testFile2.json")).getFile();
-        String actual = Differ.generate(filepath1, filepath2);
+        String actual = Differ.generate(filepath1, filepath2, "stylish");
         assertEquals(expected, actual);
     }
 
@@ -33,7 +33,7 @@ public class DifferTest {
     public void yamlDifferTest() throws Exception {
         String filepath1 = Objects.requireNonNull(classLoader.getResource("testFile1.yml")).getFile();
         String filepath2 = Objects.requireNonNull(classLoader.getResource("testFile2.yml")).getFile();
-        String actual = Differ.generate(filepath1, filepath2);
+        String actual = Differ.generate(filepath1, filepath2, "stylish");
         assertEquals(expected, actual);
     }
 }
