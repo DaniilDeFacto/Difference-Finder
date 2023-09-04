@@ -19,9 +19,7 @@ public class Differ {
 
     public static List<Map<String, Object>> createDiffMap(Map<String, Object> map1, Map<String, Object> map2) {
         List<Map<String, Object>> diffList = new ArrayList<>();
-        TreeSet<String> keySet = Stream.of(map1, map2)
-                .flatMap(m -> m.keySet().stream())
-                .collect(Collectors.toCollection(TreeSet::new));
+        TreeSet<String> keySet = mergeInSet(map1, map2);
         for (var key : keySet) {
             Map<String, Object> diffMap = new HashMap<>();
             if (map1.containsKey(key) && !map2.containsKey(key)) {
@@ -45,5 +43,11 @@ public class Differ {
             diffList.add(diffMap);
         }
         return diffList;
+    }
+
+    public static TreeSet<String> mergeInSet(Map<String, Object> map1, Map<String, Object> map2) {
+        return Stream.of(map1, map2)
+                .flatMap(m -> m.keySet().stream())
+                .collect(Collectors.toCollection(TreeSet::new));
     }
 }
