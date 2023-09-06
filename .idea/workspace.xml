@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="239ef5ae-e7fe-4ab8-a48d-c3854eda6535" name="Changes" comment="Fix App.java" />
+    <list default="true" id="848fed75-c286-429b-a256-81886ed4d940" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/app/gradlew.bat" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,35 +31,12 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="app" type="f1a62948:ProjectNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="app" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="app" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </tree_state>
         </projects_view>
       </state>
     </system>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -59,35 +44,24 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedTabId" value="CurrentFile" />
-  </component>
-  <component name="ProjectId" id="2UkwlX3I0SFzWu49GT39VPqR5q3" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2V1WgcszQVRsgTT2VZR5XJgwU3g" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "last_opened_file_path": "/Users/anastasialevcenko/Desktop/Daniil/Projects/Study/java-project-71",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/app/src/main/java/hexlet/code" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
-  </component>
-  <component name="RunManager" selected="Gradle.app [check]">
-    <configuration name="app [check]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.app [installDist]">
+    <configuration name="app [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/app" />
@@ -98,7 +72,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="check" />
+            <option value="build" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -106,7 +80,7 @@
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
     <configuration name="app [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -128,7 +102,29 @@
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="app [init]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/app" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="init" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
     <configuration name="app [installDist]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -150,10 +146,10 @@
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="app [jacocoTestCoverageVerification]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="app [wrapper]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/app" />
@@ -164,7 +160,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="jacocoTestCoverageVerification" />
+            <option value="wrapper" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -172,252 +168,28 @@
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
-      <method v="2" />
-    </configuration>
-    <configuration name="app [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$/app" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <ForceTestExec>false</ForceTestExec>
+      <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.app [check]" />
-        <item itemvalue="Gradle.app [test]" />
         <item itemvalue="Gradle.app [installDist]" />
+        <item itemvalue="Gradle.app [build]" />
         <item itemvalue="Gradle.app [clean]" />
-        <item itemvalue="Gradle.app [jacocoTestCoverageVerification]" />
+        <item itemvalue="Gradle.app [init]" />
+        <item itemvalue="Gradle.app [wrapper]" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="239ef5ae-e7fe-4ab8-a48d-c3854eda6535" name="Changes" comment="" />
-      <created>1693497038164</created>
+      <changelist id="848fed75-c286-429b-a256-81886ed4d940" name="Changes" comment="" />
+      <created>1694004178632</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1693497038164</updated>
+      <updated>1694004178632</updated>
     </task>
-    <task id="LOCAL-00001" summary="Update workflows">
-      <option name="closed" value="true" />
-      <created>1693497749191</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1693497749191</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Fix general project structure">
-      <option name="closed" value="true" />
-      <created>1693568039818</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1693568039818</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Add JsonTest">
-      <option name="closed" value="true" />
-      <created>1693568166485</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1693568166485</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Add jacoco">
-      <option name="closed" value="true" />
-      <created>1693588043064</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1693588043064</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Fix JsonTest">
-      <option name="closed" value="true" />
-      <created>1693588067489</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1693588067489</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Add badges">
-      <option name="closed" value="true" />
-      <created>1693588093037</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1693588093037</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Add code coverage">
-      <option name="closed" value="true" />
-      <created>1693589342138</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1693589342138</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Fix code coverage">
-      <option name="closed" value="true" />
-      <created>1693589949228</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1693589949228</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Add Gradle Test Logger">
-      <option name="closed" value="true" />
-      <created>1693591164160</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1693591164160</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Fix">
-      <option name="closed" value="true" />
-      <created>1693658330289</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1693658330290</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Fix">
-      <option name="closed" value="true" />
-      <created>1693658498388</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1693658498388</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Add Parser.java and dif with yaml">
-      <option name="closed" value="true" />
-      <created>1693660226371</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1693660226371</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Add Formatter.java">
-      <option name="closed" value="true" />
-      <created>1693831330692</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1693831330692</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Add Plain.java and Stylish.java">
-      <option name="closed" value="true" />
-      <created>1693847680215</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1693847680215</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Add Json.java">
-      <option name="closed" value="true" />
-      <created>1693850371886</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1693850371886</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Fix Differ.java">
-      <option name="closed" value="true" />
-      <created>1693851206411</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1693851206411</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Fix DifferTest.java">
-      <option name="closed" value="true" />
-      <created>1693853627980</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1693853627980</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Fix App.java">
-      <option name="closed" value="true" />
-      <created>1693853915335</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1693853915335</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Fix App.java">
-      <option name="closed" value="true" />
-      <created>1693854316297</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1693854316297</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Fix App.java">
-      <option name="closed" value="true" />
-      <created>1693854893909</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1693854893909</updated>
-    </task>
-    <option name="localTasksCounter" value="21" />
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Update workflows" />
-    <MESSAGE value="Fix general project structure" />
-    <MESSAGE value="Add JsonTest" />
-    <MESSAGE value="Add jacoco" />
-    <MESSAGE value="Fix JsonTest" />
-    <MESSAGE value="Add badges" />
-    <MESSAGE value="Add code coverage" />
-    <MESSAGE value="Fix code coverage" />
-    <MESSAGE value="Add Gradle Test Logger" />
-    <MESSAGE value="Fix" />
-    <MESSAGE value="Add Parser.java and dif with yaml" />
-    <MESSAGE value="Add Formatter.java" />
-    <MESSAGE value="Add Plain.java and Stylish.java" />
-    <MESSAGE value="Add Json.java" />
-    <MESSAGE value="Fix Differ.java" />
-    <MESSAGE value="Fix DifferTest.java" />
-    <MESSAGE value="Fix App.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix App.java" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.NullPointerException" package="java.lang" />
-          <option name="timeStamp" value="1" />
-        </breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
