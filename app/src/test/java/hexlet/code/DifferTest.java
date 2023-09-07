@@ -12,7 +12,7 @@ import java.util.Objects;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class DifferTest {
+public final class DifferTest {
     private static final ClassLoader CLASS_LOADER = DifferTest.class.getClassLoader();
     private static String expectedStylish;
     private static String expectedPlain;

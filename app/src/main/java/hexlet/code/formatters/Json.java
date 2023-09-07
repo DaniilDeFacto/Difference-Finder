@@ -7,8 +7,8 @@ import java.util.List;
 import java.util.Map;
 
 public class Json {
-    public static String diffToJson(List<Map<String, Object>> diffMap) throws JsonProcessingException {
+    public static String diffToJson(List<Map<String, Object>> diffList) throws JsonProcessingException {
         ObjectMapper objectMapper = new ObjectMapper();
-        return objectMapper.writeValueAsString(diffMap);
+        return objectMapper.writeValueAsString(diffList);
     }
 }

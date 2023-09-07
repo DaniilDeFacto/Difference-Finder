@@ -4,24 +4,25 @@ import java.util.List;
 import java.util.Map;
 
 public class Stylish {
-    static String removed = "  - %s: %s\n";
-    static String added = "  + %s: %s\n";
-    static String same = "    %s: %s\n";
-    static String updated = removed + added;
-    public static String diffToStylish(List<Map<String, Object>> diffMap) throws Exception {
+    private static final String REMOVED = "  - %s: %s\n";
+    private static final String ADDED = "  + %s: %s\n";
+    private static final String SAME = "    %s: %s\n";
+    private static final String UPDATED = REMOVED + ADDED;
+
+    public static String diffToStylish(List<Map<String, Object>> diffList) throws Exception {
         StringBuilder result = new StringBuilder(("{\n"));
-        for (var element : diffMap) {
+        for (var element : diffList) {
             switch (element.get("STATUS").toString()) {
-                case "REMOVED" -> result.append(String.format(removed,
+                case "REMOVED" -> result.append(String.format(REMOVED,
                         element.get("FIELD"),
                         element.get("OLD_VALUE")));
-                case "ADDED" -> result.append(String.format(added,
+                case "ADDED" -> result.append(String.format(ADDED,
                         element.get("FIELD"),
                         element.get("NEW_VALUE")));
-                case "SAME" -> result.append(String.format(same,
+                case "SAME" -> result.append(String.format(SAME,
                         element.get("FIELD"),
                         element.get("OLD_VALUE")));
-                case "UPDATED" -> result.append(String.format(updated,
+                case "UPDATED" -> result.append(String.format(UPDATED,
                         element.get("FIELD"),
                         element.get("OLD_VALUE"),
                         element.get("FIELD"),

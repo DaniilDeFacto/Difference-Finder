@@ -14,8 +14,8 @@ public class Differ {
         String inputFormat2 = defineFormat(filePath2);
         Map<String, Object> map1 = Parser.toMap(content1, inputFormat1);
         Map<String, Object> map2 = Parser.toMap(content2, inputFormat2);
-        List<Map<String, Object>> diffMap = DiffList.build(map1, map2);
-        return Formatter.toString(diffMap, format);
+        List<Map<String, Object>> diffList = DiffList.build(map1, map2);
+        return Formatter.toString(diffList, format);
     }
 
     public static String generate(String filePath1, String filePath2) throws Exception {

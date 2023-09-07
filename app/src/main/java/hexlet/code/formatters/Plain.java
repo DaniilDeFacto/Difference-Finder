@@ -4,21 +4,21 @@ import java.util.List;
 import java.util.Map;
 
 public class Plain {
-    static String removed = "Property '%s' was removed\n";
-    static String added = "Property '%s' was added with value: %s\n";
-    static String updated = "Property '%s' was updated. From %s to %s\n";
+    private static final String REMOVED = "Property '%s' was removed\n";
+    private static final String ADDED = "Property '%s' was added with value: %s\n";
+    private static final String UPDATED = "Property '%s' was updated. From %s to %s\n";
 
-    public static String diffToPlain(List<Map<String, Object>> diffMap) throws Exception {
+    public static String diffToPlain(List<Map<String, Object>> diffList) throws Exception {
         StringBuilder result = new StringBuilder();
-        for (var element : diffMap) {
+        for (var element : diffList) {
             switch (element.get("STATUS").toString()) {
-                case "REMOVED" -> result.append(String.format(removed,
+                case "REMOVED" -> result.append(String.format(REMOVED,
                         element.get("FIELD")));
-                case "ADDED" -> result.append(String.format(added,
+                case "ADDED" -> result.append(String.format(ADDED,
                         element.get("FIELD"),
                         processingComplexValue(element.get("NEW_VALUE"))));
                 case "SAME" -> { }
-                case "UPDATED" -> result.append(String.format(updated,
+                case "UPDATED" -> result.append(String.format(UPDATED,
                         element.get("FIELD"),
                         processingComplexValue(element.get("OLD_VALUE")),
                         processingComplexValue(element.get("NEW_VALUE"))));
