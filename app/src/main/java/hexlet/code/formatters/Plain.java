@@ -4,12 +4,12 @@ import java.util.List;
 import java.util.Map;
 
 public class Plain {
+    static String removed = "Property '%s' was removed\n";
+    static String added = "Property '%s' was added with value: %s\n";
+    static String updated = "Property '%s' was updated. From %s to %s\n";
+
     public static String diffToPlain(List<Map<String, Object>> diffMap) throws Exception {
         StringBuilder result = new StringBuilder();
-        String removed = "Property '%s' was removed\n";
-        String added = "Property '%s' was added with value: %s\n";
-        String updated = "Property '%s' was updated. From %s to %s\n";
-
         for (var element : diffMap) {
             switch (element.get("STATUS").toString()) {
                 case "REMOVED" -> result.append(String.format(removed,

@@ -4,12 +4,12 @@ import java.util.List;
 import java.util.Map;
 
 public class Stylish {
+    static String removed = "  - %s: %s\n";
+    static String added = "  + %s: %s\n";
+    static String same = "    %s: %s\n";
+    static String updated = removed + added;
     public static String diffToStylish(List<Map<String, Object>> diffMap) throws Exception {
         StringBuilder result = new StringBuilder(("{\n"));
-        String removed = "  - %s: %s\n";
-        String added = "  + %s: %s\n";
-        String same = "    %s: %s\n";
-        String updated = removed + added;
         for (var element : diffMap) {
             switch (element.get("STATUS").toString()) {
                 case "REMOVED" -> result.append(String.format(removed,
