@@ -9,7 +9,7 @@ public class Stylish {
     private static final String SAME = "    %s: %s\n";
     private static final String UPDATED = REMOVED + ADDED;
 
-    public static String diffToStylish(List<Map<String, Object>> diffList) throws Exception {
+    public static String diffToStylish(List<Map<String, Object>> diffList) {
         StringBuilder result = new StringBuilder(("{\n"));
         for (var element : diffList) {
             switch (element.get("STATUS").toString()) {
@@ -27,7 +27,7 @@ public class Stylish {
                         element.get("OLD_VALUE"),
                         element.get("FIELD"),
                         element.get("NEW_VALUE")));
-                default -> throw new Exception("Unexpected status: " + element.get("STATUS"));
+                default -> throw new RuntimeException("Unexpected status: " + element.get("STATUS"));
             }
         }
         result.append("}");

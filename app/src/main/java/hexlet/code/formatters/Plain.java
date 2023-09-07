@@ -8,7 +8,7 @@ public class Plain {
     private static final String ADDED = "Property '%s' was added with value: %s\n";
     private static final String UPDATED = "Property '%s' was updated. From %s to %s\n";
 
-    public static String diffToPlain(List<Map<String, Object>> diffList) throws Exception {
+    public static String diffToPlain(List<Map<String, Object>> diffList) {
         StringBuilder result = new StringBuilder();
         for (var element : diffList) {
             switch (element.get("STATUS").toString()) {
@@ -22,7 +22,7 @@ public class Plain {
                         element.get("FIELD"),
                         processingComplexValue(element.get("OLD_VALUE")),
                         processingComplexValue(element.get("NEW_VALUE"))));
-                default -> throw new Exception("Unexpected status: " + element.get("STATUS"));
+                default -> throw new RuntimeException("Unexpected status: " + element.get("STATUS"));
             }
         }
         return result.substring(0, result.length() - 1);

@@ -5,6 +5,7 @@ import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import java.io.File;
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -35,7 +36,7 @@ public final class DifferTest {
 
     @ParameterizedTest
     @ValueSource(strings = {".json", ".yml"})
-    public void differStylishTest(String inputFormat) throws Exception {
+    public void differStylishTest(String inputFormat) throws IOException {
         String filepath1 = Objects.requireNonNull(CLASS_LOADER.getResource("testFile1" + inputFormat)).getFile();
         String filepath2 = Objects.requireNonNull(CLASS_LOADER.getResource("testFile2" + inputFormat)).getFile();
         String actual = Differ.generate(filepath1, filepath2, "stylish");
@@ -44,7 +45,7 @@ public final class DifferTest {
 
     @ParameterizedTest
     @ValueSource(strings = {".json", ".yml"})
-    public void differPlainTest(String inputFormat) throws Exception {
+    public void differPlainTest(String inputFormat) throws IOException {
         String filepath1 = Objects.requireNonNull(CLASS_LOADER.getResource("testFile1" + inputFormat)).getFile();
         String filepath2 = Objects.requireNonNull(CLASS_LOADER.getResource("testFile2" + inputFormat)).getFile();
         String actual = Differ.generate(filepath1, filepath2, "plain");
@@ -53,7 +54,7 @@ public final class DifferTest {
 
     @ParameterizedTest
     @ValueSource(strings = {".json", ".yml"})
-    public void differJsonTest(String inputFormat) throws Exception {
+    public void differJsonTest(String inputFormat) throws IOException {
         String filepath1 = Objects.requireNonNull(CLASS_LOADER.getResource("testFile1" + inputFormat)).getFile();
         String filepath2 = Objects.requireNonNull(CLASS_LOADER.getResource("testFile2" + inputFormat)).getFile();
         String actual = Differ.generate(filepath1, filepath2, "json");
@@ -62,7 +63,7 @@ public final class DifferTest {
 
     @ParameterizedTest
     @ValueSource(strings = {".json", ".yml"})
-    public void differDefaultTest(String inputFormat) throws Exception {
+    public void differDefaultTest(String inputFormat) throws IOException {
         String filepath1 = Objects.requireNonNull(CLASS_LOADER.getResource("testFile1" + inputFormat)).getFile();
         String filepath2 = Objects.requireNonNull(CLASS_LOADER.getResource("testFile2" + inputFormat)).getFile();
         String actual = Differ.generate(filepath1, filepath2);
