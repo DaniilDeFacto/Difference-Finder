@@ -20,18 +20,16 @@ public final class DifferTest {
     private static String expectedJson;
 
     @BeforeAll
-    static void beforeAll() throws Exception {
-        File expectedStylishFile = new File(CLASS_LOADER.getResource("expectedStylishFile.txt").getFile());
-        Path pathExpectedStylishFile = Paths.get(expectedStylishFile.getAbsolutePath()).normalize();
-        expectedStylish = Files.readString(pathExpectedStylishFile);
+    static void beforeAll() throws IOException {
+        expectedStylish = readFile("expectedStylishFile.txt");
+        expectedPlain = readFile("expectedPlainFile.txt");
+        expectedJson = readFile("expectedJsonFile.txt");
+    }
 
-        File expectedPlainFile = new File(CLASS_LOADER.getResource("expectedPlainFile.txt").getFile());
-        Path pathExpectedPlainFile = Paths.get(expectedPlainFile.getAbsolutePath()).normalize();
-        expectedPlain = Files.readString(pathExpectedPlainFile);
-
-        File expectedJsonFile = new File(CLASS_LOADER.getResource("expectedJsonFile.txt").getFile());
-        Path pathExpectedJsonFile = Paths.get(expectedJsonFile.getAbsolutePath()).normalize();
-        expectedJson = Files.readString(pathExpectedJsonFile);
+    static String readFile(String nameFile) throws IOException {
+        File expectedFile = new File(CLASS_LOADER.getResource(nameFile).getFile());
+        Path pathExpectedFile = Paths.get(expectedFile.getAbsolutePath()).normalize();
+        return Files.readString(pathExpectedFile);
     }
 
     @ParameterizedTest

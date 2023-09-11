@@ -12,7 +12,7 @@ import java.util.stream.Stream;
 public class DiffList {
     public static List<Map<String, Object>> build(Map<String, Object> map1, Map<String, Object> map2) {
         List<Map<String, Object>> diffList = new ArrayList<>();
-        TreeSet<String> keySet = mergeInSet(map1, map2);
+        TreeSet<String> keySet = collectKeysInSet(map1, map2);
         for (var key : keySet) {
             Map<String, Object> diffMap = new HashMap<>();
             if (map1.containsKey(key) && !map2.containsKey(key)) {
@@ -38,7 +38,7 @@ public class DiffList {
         return diffList;
     }
 
-    public static TreeSet<String> mergeInSet(Map<String, Object> map1, Map<String, Object> map2) {
+    public static TreeSet<String> collectKeysInSet(Map<String, Object> map1, Map<String, Object> map2) {
         return Stream.of(map1, map2)
                 .flatMap(m -> m.keySet().stream())
                 .collect(Collectors.toCollection(TreeSet::new));
